@@ -1,5 +1,5 @@
-class Users < ActiveRecord::Base
-  validates_presence_of :username, :password, :balance
+class CreateUsersTable < ActiveRecord::Migration
+  
 
   def change
     create_table :users do |t|
