@@ -11,6 +11,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    @user = User.new(username: params["username"], password: params["password"], balance: params["balance"])
+    session[:user_id] = @user.id
 
   end
 
@@ -24,4 +26,3 @@ class ApplicationController < Sinatra::Base
 
 
 end
-
